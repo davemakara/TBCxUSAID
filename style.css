@@ -1,0 +1,137 @@
+:root {
+  --lightblue-color: #00aeef;
+  --white-color: #f4f4f4;
+  --main-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--white-color);
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
+}
+body {
+  font-family: var(--main-font);
+  min-height: 100vh;
+}
+
+header {
+  background: #1a1e1f;
+  padding: 1rem 0;
+}
+
+.navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-menu {
+  display: none;
+  /* align-items: center; */
+}
+
+.main-menu li {
+  font-size: 17px;
+
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+.main-menu li:hover {
+  color: var(--lightblue-color);
+}
+
+.burger-menu {
+  position: fixed;
+  background-color: aqua;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 60%;
+  top: 0;
+  right: -60%;
+  padding: 7rem 0;
+  text-align: right;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+.burger-menu.active {
+  right: 0;
+}
+
+.ham-menu {
+  height: 40px;
+  width: 40px;
+  /* margin-left: auto; */
+  position: relative;
+  z-index: 11;
+}
+
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  z-index: 5;
+}
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .navigation-wrapper {
+    justify-content: space-around;
+  }
+  .main-menu {
+    display: flex;
+    /* align-items: center; */
+  }
+  .ham-menu {
+    display: none;
+  }
+  .burger-menu {
+    display: none;
+  }
+}
