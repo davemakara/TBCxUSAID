@@ -1,6 +1,11 @@
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+
 :root {
   --lightblue-color: #00aeef;
   --white-color: #f4f4f4;
+  --description-bg-color: #2b2b2b;
+  --description-btn-color: #00aef3;
+  /* --main-font: "Helvetica Neue", sans-serif; */
   --main-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -34,7 +39,7 @@ header {
 }
 
 .main-menu li {
-  font-size: 17px;
+  font-size: 16px;
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   transition: color 0.3s ease-in-out;
@@ -131,13 +136,14 @@ header {
   height: 250px;
   overflow: hidden;
   position: relative;
+  margin-bottom: -1px;
 }
 
 .bg-photo-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  /* object-position: center center; */
 }
 
 .bg-photo-captions {
@@ -151,7 +157,27 @@ header {
 .bg-photo-captions h1,
 .bg-photo-captions h2 {
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 600;
+}
+
+.page-description-wrapper {
+  background: var(--description-bg-color);
+  padding: 2rem 1.5rem;
+  font-size: 21px;
+}
+
+.page-description-wrapper p {
+  margin-bottom: 2rem;
+}
+
+.page-description-wrapper a {
+  color: var(--description-btn-color);
+  padding: 4px;
+  font-weight: 600;
+  transition: color 0.5s ease;
+}
+.page-description-wrapper a:hover {
+  color: var(--white-color);
 }
 
 @media only screen and (min-width: 500px) {
@@ -177,9 +203,9 @@ header {
   .overlay {
     display: none;
   }
-  .bg-photo-wrapper {
+  /* .bg-photo-wrapper {
     height: auto;
-  }
+  } */
   .bg-photo-captions {
     position: absolute;
     color: var(--white-color);
@@ -187,9 +213,24 @@ header {
     left: 15%;
     transform: translateY(-50%);
   }
+
+  .page-description-wrapper {
+    padding: 2rem 2.5rem;
+    font-size: 23px;
+  }
+  .page-description-wrapper a {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
 }
 
 @media only screen and (min-width: 1050px) {
+  .bg-photo-wrapper {
+    height: auto;
+    margin-bottom: -4px;
+  }
+
   .bg-photo-captions h1 {
     font-size: 50px;
     margin-bottom: 0.7rem;
@@ -197,5 +238,15 @@ header {
 
   .bg-photo-captions h2 {
     font-size: 38px;
+  }
+  .page-description-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    font-size: 31px;
+    letter-spacing: 1px;
+  }
+  .page-description-wrapper div {
+    max-width: 80%;
   }
 }
