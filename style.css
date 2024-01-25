@@ -20,7 +20,7 @@ body {
 
 header {
   background: #1a1e1f;
-  padding: 1rem 0;
+  padding: 1rem 1.5rem;
 }
 
 .navigation-wrapper {
@@ -35,24 +35,28 @@ header {
 
 .main-menu li {
   font-size: 17px;
-
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   transition: color 0.3s ease-in-out;
 }
-.main-menu li:hover {
+.selected {
+  color: var(--lightblue-color);
+}
+
+.main-menu li:hover,
+.burger-menu a li:hover {
   color: var(--lightblue-color);
 }
 
 .burger-menu {
   position: fixed;
-  background-color: aqua;
+  background-color: rgb(43, 43, 43);
   min-height: 100vh;
   width: 100%;
-  max-width: 60%;
+  max-width: 65%;
   top: 0;
-  right: -60%;
-  padding: 7rem 0;
+  right: -65%;
+  padding: 6.5rem 1rem;
   text-align: right;
   transition: 0.3s ease;
   z-index: 10;
@@ -61,23 +65,31 @@ header {
   right: 0;
 }
 
+.burger-menu a li {
+  padding: 1rem 0.2rem;
+  font-size: 17px;
+  transition: color 0.3s ease-in-out;
+}
+
 .ham-menu {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   /* margin-left: auto; */
   position: relative;
   z-index: 11;
+  padding: 4px;
+  cursor: pointer;
 }
 
 .ham-menu span {
-  height: 5px;
+  height: 4px;
   width: 100%;
   background-color: #f4f4f4;
   border-radius: 25px;
   position: absolute;
   top: 50%;
-  left: -50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  /* transform: translate(0, -50%); */
   transition: 0.3s ease;
 }
 
@@ -90,14 +102,14 @@ header {
 
 .ham-menu.active span:nth-child(1) {
   top: 50%;
-  transform: translate(-50%, 50%) rotate(45deg);
+  transform: translate(0, 50%) rotate(45deg);
 }
 .ham-menu.active span:nth-child(2) {
   opacity: 0;
 }
 .ham-menu.active span:nth-child(3) {
   top: 50%;
-  transform: translate(-50%, 50%) rotate(-45deg);
+  transform: translate(0, 50%) rotate(-45deg);
 }
 
 .overlay {
@@ -112,6 +124,34 @@ header {
 }
 .hidden {
   display: none;
+}
+
+.bg-photo-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.bg-photo-captions {
+  position: absolute;
+  color: var(--white-color);
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.bg-photo-captions h1,
+.bg-photo-captions h2 {
+  font-size: 30px;
+  font-weight: 800;
 }
 
 @media only screen and (min-width: 500px) {
@@ -133,5 +173,29 @@ header {
   }
   .burger-menu {
     display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .bg-photo-wrapper {
+    height: auto;
+  }
+  .bg-photo-captions {
+    position: absolute;
+    color: var(--white-color);
+    top: 40%;
+    left: 15%;
+    transform: translateY(-50%);
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .bg-photo-captions h1 {
+    font-size: 50px;
+    margin-bottom: 0.7rem;
+  }
+
+  .bg-photo-captions h2 {
+    font-size: 38px;
   }
 }

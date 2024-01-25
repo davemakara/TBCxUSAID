@@ -15,11 +15,10 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="overlay hidden"></div>
     <header>
       <nav class="navigation-wrapper">
         <div>
-          <a href="#"><img src="./assets/logo.PNG" /> </a>
+          <a href="#"><img src="./assets/logo.PNG" alt="tbc logo" /> </a>
         </div>
         <div class="ham-menu" id="ham-menu-icon">
           <span></span>
@@ -29,19 +28,27 @@
         <ul class="main-menu">
           <a href="#"><li>მთავარი</li></a>
           <a href="#"><li>TBC IT</li></a>
-          <a href="#"><li>TBC x USAID</li></a>
+          <a href="#"><li class="selected">TBC x USAID</li></a>
           <a href="#"><li>რისკები</li></a>
         </ul>
         <ul class="burger-menu">
           <a href="#"><li>მთავარი</li></a>
           <a href="#"><li>TBC IT</li></a>
-          <a href="#"><li>TBC x USAID</li></a>
+          <a href="#"><li class="selected">TBC x USAID</li></a>
           <a href="#"><li>რისკები</li></a>
         </ul>
       </nav>
     </header>
-
-    <main></main>
+    <main>
+      <div class="overlay hidden"></div>
+      <section class="bg-photo-wrapper">
+        <img src="/assets/bg-photo.webp" alt="background office photo" />
+        <div class="bg-photo-captions">
+          <h1>TBC x USAID</h1>
+          <h2>ტექნოლოგიური განათლებისთვის</h2>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
