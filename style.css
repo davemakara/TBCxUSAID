@@ -223,6 +223,101 @@ header {
   margin-right: 5px;
 }
 
+.carousel-container {
+  background: var(--description-bg-color);
+}
+
+.carousel-heading {
+  padding: 1.5rem;
+  font-size: 24px;
+}
+
+.slideshow-container {
+  /* max-width: 85%; */
+  width: 70%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  padding: 3rem 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s ease;
+}
+
+.mySlides img {
+  padding: 1rem;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  color: #828282;
+}
+
+.dots-wrapper {
+  padding-bottom: 2rem;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 7px;
+  width: 7px;
+  margin: 0 2px;
+  background-color: #f6f6f6;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #828282;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 500px) {
   body {
     background-color: lightblue;
@@ -270,6 +365,25 @@ header {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .carousel-heading {
+    padding: 2.5rem 11rem 2rem;
+    font-size: 28px;
+  }
+
+  .slideshow-container {
+    width: 90%;
+  }
+
+  .mySlides {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .dots-wrapper {
+    padding-bottom: 3rem;
+  }
 }
 
 @media only screen and (min-width: 1050px) {
@@ -298,5 +412,9 @@ header {
   }
   .cards-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .mySlides {
+    padding: 3rem 3rem 0;
+    justify-content: space-around;
   }
 }
