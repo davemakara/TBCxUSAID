@@ -6,7 +6,7 @@
     <link
       rel="icon"
       sizes="192x192"
-      href="./assets/logo-icon.png"
+      href="./assets/image/logo-icon.png"
       type="image/png"
     />
     <title>TBC x USAID</title>
@@ -24,7 +24,7 @@
     <header>
       <nav class="navigation-wrapper">
         <div>
-          <a href="#"><img src="./assets/logo.PNG" alt="tbc logo" /> </a>
+          <a href="#"><img src="./assets/image/logo.PNG" alt="tbc logo" /> </a>
         </div>
         <div class="ham-menu" id="ham-menu-icon">
           <span></span>
@@ -48,10 +48,10 @@
     <main>
       <div class="overlay hidden"></div>
       <section class="bg-photo-wrapper">
-        <img src="./assets/bg-photo.png" alt="background office photo" />
+        <img src="./assets/image/bg-photo.png" alt="background office photo" />
         <div class="bg-photo-captions">
           <h1>TBC x USAID</h1>
-          <h2>ტექნოლოგიური განათლებისთვის</h2>
+          <h2>ᲢᲔᲥᲜᲝᲚᲝᲒᲘᲣᲠᲘ ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡᲗᲕᲘᲡ</h2>
         </div>
       </section>
       <section class="page-description-wrapper">
@@ -76,25 +76,50 @@
         <p class="carousel-heading">პროექტის პარტნიორები</p>
         <div class="slideshow-container">
           <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <img src="./assets/slides/usaid.webp" />
-            <img src="./assets/slides/spaceInt.webp" />
-            <img src="./assets/slides/tineti.webp" />
-          </div>
+          <a class="prev" onclick="plusSlides(-1)"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41">
+              <path
+                d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"
+              ></path></svg
+          ></a>
+          <div class="slider-container">
+            <div class="mySlides fade">
+              <span id="usaidLogo">
+                <img src="./assets/image/slides/usaid.webp" />
+              </span>
+              <span id="spaceIntLogo"
+                ><img src="./assets/image/slides/spaceInt.webp"
+              /></span>
+              <span id="tinetiLogo"
+                ><img src="./assets/image/slides/tineti.webp"
+              /></span>
+            </div>
 
-          <div class="mySlides fade">
-            <img src="./assets/slides/tegeta.webp" />
-            <img src="./assets/slides/spectre.webp" />
-            <img src="./assets/slides/tbc.webp" />
-          </div>
+            <div class="mySlides fade">
+              <span id="tegetaLogo">
+                <img src="./assets/image/slides/tegeta.webp" />
+              </span>
+              <span id="spectreLogo"
+                ><img src="./assets/image/slides/spectre.webp"
+              /></span>
+              <span id="tbcLogo"
+                ><img src="./assets/image/slides/tbc.webp"
+              /></span>
+            </div>
 
-          <div class="mySlides fade">
-            <img src="./assets/slides/ufc.webp" />
+            <div class="mySlides fade">
+              <span id="ufcLogo"
+                ><img src="./assets/image/slides/ufc.webp"
+              /></span>
+            </div>
           </div>
-
           <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="next" onclick="plusSlides(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41">
+              <path
+                d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"
+              ></path></svg
+          ></a>
         </div>
         <br />
 
@@ -109,13 +134,19 @@
     <footer>
       <section class="footer-container">
         <div class="footer-logo">
-          <img src="./assets/footer/footer-tbc.webp" alt="tbc logo" />
+          <img src="./assets/image/footer/footer-tbc.webp" alt="tbc logo" />
         </div>
         <div class="footer-contact">
           <button class="contact-btn">მოგვწერეთ</button>
           <div class="footer-social">
-            <img src="./assets/footer/footer-fb.webp" alt="facebook logo" />
-            <img src="./assets/footer/footer-youtube.webp" alt="youtube logo" />
+            <img
+              src="./assets/image/footer/footer-fb.webp"
+              alt="facebook logo"
+            />
+            <img
+              src="./assets/image/footer/footer-youtube.webp"
+              alt="youtube logo"
+            />
           </div>
         </div>
         <div class="footer-copyright">

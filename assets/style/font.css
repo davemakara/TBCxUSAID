@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "fontRegular";
+  src: url("../fonts/font1.woff2");
+}
+@font-face {
+  font-family: "fontRegular2";
+  src: url("../fonts/font2.woff2");
+}
+@font-face {
+  font-family: "fontBold";
+  src: url("../fonts/font3.woff2");
+}
+@font-face {
+  font-family: "fontRegular4";
+  src: url("../fonts/font4.woff2");
+}
+@font-face {
+  font-family: "fontRegular5";
+  src: url("../fonts/font5.woff2");
+}

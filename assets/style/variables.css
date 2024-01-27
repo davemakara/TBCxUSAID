@@ -1,0 +1,15 @@
+:root {
+  --lightblue-color: #00aeef;
+  --white-color: #f4f4f4;
+  --description-bg-color: #2b2b2b;
+  --description-btn-color: #00aef3;
+  --footer-btn-color: #00aef3;
+  --cards-bg-color: rgb(22, 22, 22);
+  --footer-bg-color: rgb(22, 22, 22);
+  --contact-btn-hover: #706d6d;
+  --contact-btn-bg-hover: #ccc9c9;
+  --arrow-color: rgb(230, 230, 230);
+  --terms-hover: #706d6d;
+  /* --main-font: "Helvetica Neue", sans-serif; */
+  --main-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

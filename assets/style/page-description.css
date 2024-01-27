@@ -1,0 +1,46 @@
+.page-description-wrapper {
+  background: var(--description-bg-color);
+  padding: 2rem 1.5rem;
+  font-size: 21px;
+  font-family: "fontRegular";
+}
+
+.page-description-wrapper p {
+  margin-bottom: 2rem;
+}
+
+.page-description-wrapper a {
+  color: var(--description-btn-color);
+  padding: 4px;
+  font-weight: 600;
+  transition: color 0.5s ease;
+}
+.page-description-wrapper a:hover {
+  color: var(--white-color);
+}
+
+@media only screen and (min-width: 700px) {
+  .page-description-wrapper {
+    padding: 2rem 2.5rem;
+    font-size: 23px;
+  }
+  .page-description-wrapper a {
+    font-size: 20px;
+    /* font-weight: 700; */
+    /* letter-spacing: 0; */
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .page-description-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    font-size: 28px;
+
+    /* letter-spacing: 1px; */
+  }
+  .page-description-wrapper div {
+    max-width: 80%;
+  }
+}
