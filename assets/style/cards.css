@@ -98,7 +98,7 @@ svg {
   }
 }
 
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1450px) {
   .cards-section-wrapper {
     padding: 1rem 29rem 1.5rem;
   }
