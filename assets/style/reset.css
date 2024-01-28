@@ -5,29 +5,8 @@
   text-decoration: none;
   list-style-type: none;
   color: var(--white-color);
-  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
 }
 body {
   font-family: var(--main-font);
   min-height: 100vh;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(1px);
-  z-index: 5;
-}
-.hidden {
-  display: none;
-}
-
-@media only screen and (min-width: 700px) {
-  .overlay {
-    display: none;
-  }
 }

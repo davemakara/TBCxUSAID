@@ -26,8 +26,6 @@
   }
   .page-description-wrapper a {
     font-size: 20px;
-    /* font-weight: 700; */
-    /* letter-spacing: 0; */
   }
 }
 
@@ -37,10 +35,20 @@
     justify-content: center;
     padding: 4rem;
     font-size: 28px;
-
-    /* letter-spacing: 1px; */
   }
   .page-description-wrapper div {
     max-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .page-description-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    font-size: 28px;
+  }
+  .page-description-wrapper div {
+    max-width: 58%;
   }
 }

@@ -1,6 +1,7 @@
 header {
   background: #1a1e1f;
   padding: 1rem 1.5rem;
+  transition: 1s linear;
 }
 
 .navigation-wrapper {
@@ -8,9 +9,9 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 .main-menu {
   display: none;
-  /* align-items: center; */
 }
 
 .main-menu li {
@@ -29,22 +30,36 @@ header {
   color: var(--lightblue-color);
 }
 
-.burger-menu {
+.overlay {
+  visibility: hidden;
   position: fixed;
-  background: rgb(43, 43, 43);
   min-height: 100vh;
   width: 100%;
-  max-width: 65%;
   top: 0;
-  right: -65%;
+  left: 0;
+  z-index: -1000;
+  display: flex;
+  justify-content: flex-end;
+  backdrop-filter: blur(1px);
+}
+
+.overlay.active {
+  z-index: 200;
+  visibility: visible;
+}
+
+.burger-menu {
+  background: rgb(43, 43, 43);
+  width: 65%;
   padding: 6.5rem 1rem;
   text-align: right;
   transition: 0.3s ease;
   z-index: 10;
+  transform: translateX(100%);
 }
 .burger-menu.active {
-  right: 0;
   background: rgb(43, 43, 43);
+  transform: unset;
 }
 
 .burger-menu a li {
@@ -57,11 +72,9 @@ header {
 .ham-menu {
   height: 35px;
   width: 35px;
-  /* margin-left: auto; */
   position: relative;
-  z-index: 11;
-  /* padding: 4px; */
   cursor: pointer;
+  z-index: 201;
 }
 
 .ham-menu.active {
@@ -75,8 +88,6 @@ header {
   border-radius: 25px;
   position: absolute;
   top: 50%;
-
-  /* transform: translate(0, -50%); */
   transition: 0.3s ease;
 }
 
@@ -105,18 +116,45 @@ header {
   transform: translate(0, 50%) rotate(-45deg);
 }
 
+.show-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(34, 34, 34, 0.95);
+}
+
+.menu-active {
+  transform: unset;
+}
+
 @media only screen and (min-width: 700px) {
   .navigation-wrapper {
     justify-content: space-around;
   }
   .main-menu {
     display: flex;
-    /* align-items: center; */
   }
   .ham-menu {
     display: none;
   }
   .burger-menu {
     display: none;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  header {
+    padding: 1rem 10rem;
   }
 }

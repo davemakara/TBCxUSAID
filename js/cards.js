@@ -1,21 +1,4 @@
-const hamMenu = document.querySelector(".ham-menu");
-const burgerMenu = document.querySelector(".burger-menu");
-const overlay = document.querySelector(".overlay");
-const body = document.body;
-
 const cardContainer = document.getElementById("cardsContainer");
-
-const burgerMenuToggle = () => {
-  hamMenu.classList.toggle("active");
-  burgerMenu.classList.toggle("active");
-  overlay.classList.toggle("hidden");
-
-  body.style.overflow = body.style.overflow === "hidden" ? "auto" : "hidden";
-};
-
-hamMenu.addEventListener("click", burgerMenuToggle);
-
-overlay.addEventListener("click", burgerMenuToggle);
 
 const cards = [
   {
@@ -74,47 +57,17 @@ const cards = [
   },
 ];
 
+const svgArrow = `<svg preserveAspectRatio="xMidYMid meet" data-bbox="1.833 2.667 13.334 10.666" xmlns="http://www.w3.org/2000/svg" viewBox="1.833 2.667 13.334 10.666" height="16" width="17" data-type="color" role="presentation" aria-hidden="true"><defs><style>#comp-lnoncoa62__12a0b52d-d2f4-498f-8668-ef4342a659a0 svg [data-color="1"] {fill: #00AEEF;}</style></defs>
+<g>
+    <path fill="#ffffff" d="m10.3 2.867 4.667 4.666a.645.645 0 0 1 0 .934L10.3 13.133a.644.644 0 0 1-.933 0 .644.644 0 0 1 0-.933L12.9 8.667H2.5c-.4 0-.667-.267-.667-.667s.267-.667.667-.667h10.4L9.367 3.8a.605.605 0 0 1-.2-.467c0-.2.066-.333.2-.466a.644.644 0 0 1 .933 0Z" data-color="1"></path>
+</g>
+</svg>`;
+
 cards.forEach((cardData) => {
   const card = document.createElement("div");
   card.classList.add("card");
 
-  card.innerHTML = `<img src=${cardData.image} alt=${cardData.title} /> <p class="card-title">${cardData.title}</p><p class="card-description">${cardData.description}</p> <p class="card-details"><i class="fa-solid fa-arrow-right"></i> კურსის დეტალები</p>`;
+  card.innerHTML = `<div class="card-content"><img src=${cardData.image} alt=${cardData.title} /> <p class="card-title">${cardData.title}</p><p class="card-description">${cardData.description}</p></div> <p class="card-details">${svgArrow} <span>კურსის დეტალები</span></p>`;
 
   cardContainer.appendChild(card);
 });
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    // slides[i].style.opacity = "0";
-    slides[i].classList.add("hidden-items");
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  // slides[slideIndex - 1].style.opacity = "1";
-  slides[slideIndex - 1].classList.remove("hidden-items");
-  dots[slideIndex - 1].className += " active";
-}
